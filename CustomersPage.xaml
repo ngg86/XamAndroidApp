@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnotherApp.CustomersPage">
+    <ContentPage.Content>
+        <StackLayout 
+            x:Name="StackLayout"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="DarkGray">
+            <Editor 
+                x:Name="EditorWarning"
+                IsVisible="False"></Editor>
+            <ListView 
+                x:Name="ListView"
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand"
+                ItemTapped="ListView_OnItemTapped"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

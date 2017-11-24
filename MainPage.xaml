@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AnotherApp"
+             xmlns:widget="clr-namespace:Android.Widget;assembly=Mono.Android"
+             x:Class="AnotherApp.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="20,40,20,20"></On>
+            <On Platform="Android, WinPhone, Windows" Value="20"></On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout  
+        VerticalOptions="CenterAndExpand" 
+        HorizontalOptions="CenterAndExpand">
+        <Label 
+            Text="Username"
+            HorizontalOptions="Center"/>
+        <Entry 
+            x:Name="EntryUsername"/>
+        <Label 
+            Text="Password"
+            HorizontalOptions="Center"/>
+        <Entry 
+            x:Name="EntryPassword"
+            IsPassword="True"/>
+        
+        <TableView>
+            <TableRoot>
+                <TableSection>
+                    <SwitchCell 
+                        x:Name="RememberSwitch"
+                        Text="Remember me"
+                        On="False"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button 
+            Text="Login"
+            x:Name="ButtonLogin"
+            Clicked="ButtonLogin_OnClicked"/>
+        <Editor 
+            x:Name="EditorWarn"
+            IsVisible="False"/>
+    </StackLayout>
+</ContentPage>

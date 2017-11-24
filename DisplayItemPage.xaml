@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnotherApp.DisplayItemPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="StackLayout"
+                     BackgroundColor="DarkSlateGray">
+            <Label x:Name="HeaderLabel"
+                   TextColor="WhiteSmoke"/>
+            <TableView x:Name="TableView"
+                       Intent="Form">
+                <TableRoot x:Name="Root">
+                    <TableSection x:Name="Section"/>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
